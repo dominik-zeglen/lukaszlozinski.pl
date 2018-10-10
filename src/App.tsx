@@ -8,7 +8,9 @@ class App extends React.Component {
   public render() {
     return (
       <Scroll>
-        {scrollPosition => <Page scrollPosition={scrollPosition} />}
+        {scrollPosition => (
+          <Page heroText="Header" scrollPosition={scrollPosition} />
+        )}
       </Scroll>
     );
   }
