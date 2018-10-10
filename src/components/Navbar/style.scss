@@ -1,0 +1,31 @@
+@import '../../variables';
+
+.navbar {
+  background: #ffffff;
+  &__container {
+    display: flex;
+    height: 160px;
+    justify-content: space-between;
+  }
+  &__logo {
+    height: 100%;
+  }
+  &__logo-container {
+    align-self: center;
+    height: 99px;
+    width: 174px;
+  }
+  &__menuItem {
+    border-bottom: 4px solid transparent;
+    margin-top: 92px;
+    text-align: center;
+    transition-duration: $transition-duration;
+    width: 120px;
+    &:hover {
+      border-bottom-color: transparentize($yellow, .4);
+    }
+    &--active {
+      border-bottom-color: $yellow;
+    }
+  }
+}
