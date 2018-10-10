@@ -12,8 +12,15 @@
   justify-content: center;
   &__text {
     color: $yellow;
-    font-family: 'Playfair Display SC', sans-serif;
+    font-family: 'Playfair Display SC';
     font-size: 3.5rem;
     font-style: italic;
+    z-index: 1;
+    &--shadow {
+      color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      transform: translateX(2px) translateY(-1px);
+      z-index: 0;
+    }
   }
 }

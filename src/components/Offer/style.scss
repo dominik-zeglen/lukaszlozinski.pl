@@ -11,13 +11,15 @@
   &__image-container {
     grid-column-end: span 2;
   }
-  &__content {}
-  &__content-container {}
+  &__content {
+  }
+  &__content-container {
+  }
   &__content-header {
-    font-family: $font-header, sans-serif;
+    font-family: $font-header;
     font-size: 1.5rem;
     font-style: italic;
-      line-height: 40px;
+    line-height: 40px;
     margin: 10px 0 50px;
     &:after {
       background-color: $yellow;
