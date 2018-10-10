@@ -1,6 +1,8 @@
+@import '../../variables';
+
 .section {
   &__header {
-    font-family: 'Playfair Display SC';
+    font-family: $font-header, sans-serif;
     font-size: 3.5rem;
     font-style: italic;
     padding: 70px 0;

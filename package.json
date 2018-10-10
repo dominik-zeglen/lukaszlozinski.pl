@@ -120,6 +120,10 @@
     "/graphql": {
       "target": "http://localhost:8000/graphql",
       "changeOrigin": true
+    },
+    "/static": {
+      "target": "http://localhost:8000",
+      "changeOrigin": true
     }
   }
 }

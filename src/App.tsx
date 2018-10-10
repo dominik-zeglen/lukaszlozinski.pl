@@ -34,7 +34,7 @@ class App extends React.Component {
           return (
             <Scroll>
               {scrollPosition => (
-                <Page data={data} heroText="Header" scrollPosition={scrollPosition} />
+                <Page data={data} scrollPosition={scrollPosition} />
               )}
             </Scroll>
           )}}

@@ -10,6 +10,7 @@ export const SITEDATA = gql`
     pages {
       id
       name
+      slug
       fields {
         name
         value
