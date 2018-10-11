@@ -28,3 +28,32 @@ html {
   min-height: 100vh;
   min-width: 100vw;
 }
+
+.about-me {
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  &__image {
+    width: 100%;
+  }
+  &__image-container {}
+  &__content {
+    grid-column-end: span 2;
+  }
+  h2 {
+    font-family: $font-header;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 40px;
+    margin: 10px 0 50px;
+    &:after {
+      background-color: $yellow;
+      bottom: -4px;
+      content: '';
+      display: block;
+      height: 4px;
+      position: relative;
+      width: 80px;
+    }
+  }
+}

@@ -37,7 +37,7 @@ export const Navbar: React.SFC<INavbarProps> = ({scrollPosition}) => (
       </a>
       {menuItems.map(menuItem => (
         <MenuItem
-          active={isScrolledTo(menuItem.id, scrollPosition)}
+          active={isScrolledTo(menuItem.id)}
           href={'#' + menuItem.id}
           key={menuItem.id}
         >

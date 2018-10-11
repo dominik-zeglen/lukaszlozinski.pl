@@ -5,6 +5,9 @@
   grid-column-gap: 40px;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 80px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   &__image {
     width: 100%;
   }

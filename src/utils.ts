@@ -8,7 +8,7 @@ export interface IPage {
   }>;
 }
 
-export const isScrolledTo = (nodeId: string, scrollPosition: number) => {
+export const isScrolledTo = (nodeId: string) => {
   const node = document.querySelector('#' + nodeId);
   if (!node) {
     return false;
@@ -16,7 +16,7 @@ export const isScrolledTo = (nodeId: string, scrollPosition: number) => {
   const topPosition = node.getBoundingClientRect().top;
   const bottomPosition = node.getBoundingClientRect().bottom;
 
-  return scrollPosition >= topPosition && scrollPosition <= bottomPosition;
+  return topPosition < 0 && bottomPosition > 0;
 };
 
 export const getPageBySlug = (pages: IPage[], slug: string) =>
