@@ -30,7 +30,7 @@ export const Page: React.SFC<IPageProps> = ({data, scrollPosition}) => (
       }
     />
     <main className="container">
-      <Section title={data.offers.name}>
+      <Section id="oferta" title={data.offers.name}>
         {data.offers.pages.map((offer, offerIndex) => (
           <Offer offer={offer} reverse={offerIndex % 2 === 1} key={offer.id} />
         ))}

@@ -24,7 +24,7 @@ class Scroll extends React.Component<IScrollProps, IScrollState> {
   };
 
   public componentDidMount() {
-    const intervalId = setInterval(this.setScrollPosition, 250);
+    const intervalId = setInterval(this.setScrollPosition, 33);
     this.setState({
       intervalId,
     });

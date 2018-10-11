@@ -1,3 +1,4 @@
+import * as classNames from 'classnames';
 import * as React from 'react';
 
 import * as logo from '../../assets/images/logo.png';
@@ -10,10 +11,6 @@ interface INavbarProps {
 }
 
 const menuItems: IMenuItem[] = [
-  {
-    id: 'aktualnosci',
-    label: 'Aktualności',
-  },
   {
     id: 'o-mnie',
     label: 'O mnie',
@@ -29,22 +26,21 @@ const menuItems: IMenuItem[] = [
 ];
 
 export const Navbar: React.SFC<INavbarProps> = ({scrollPosition}) => (
-  <div className="navbar">
+  <div
+    className={classNames({
+      navbar: true,
+      'navbar--floating': scrollPosition > 0,
+    })}>
     <div className="container navbar__container">
-      {menuItems.slice(0, 2).map(menuItem => (
-        <MenuItem
-          active={isScrolledTo(menuItem.id, scrollPosition)}
-          href={'#' + menuItem.id}>
-          {menuItem.label}
-        </MenuItem>
-      ))}
       <a className="navbar__logo-container" href="#">
         <img className="navbar__logo" src={logo} />
       </a>
-      {menuItems.slice(2, 4).map(menuItem => (
+      {menuItems.map(menuItem => (
         <MenuItem
           active={isScrolledTo(menuItem.id, scrollPosition)}
-          href={'#' + menuItem.id}>
+          href={'#' + menuItem.id}
+          key={menuItem.id}
+        >
           {menuItem.label}
         </MenuItem>
       ))}
