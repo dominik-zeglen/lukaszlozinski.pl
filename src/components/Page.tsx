@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import {getPageBySlug, getPageFields, IPage} from '../utils';
+import Footer from './Footer';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import Offer from './Offer';
@@ -29,6 +30,9 @@ export const Page: React.SFC<IPageProps> = ({data, scrollPosition}) => {
 
   const contactInfo = getPageBySlug(data.siteElements.pages, 'contact-info');
   const contactInfoFields = getPageFields(contactInfo);
+
+  const footer = getPageBySlug(data.siteElements.pages, 'footer');
+  const footerFields = getPageFields(footer);
 
   return (
     <div className="page">
@@ -79,31 +83,38 @@ export const Page: React.SFC<IPageProps> = ({data, scrollPosition}) => {
               </div>
             </div>
             <form onSubmit={() => undefined}>
-            <div className="contact__form">
-              <div className="contact__form-helper-text">
-                {contactFormFields.text}
+              <div className="contact__form">
+                <div className="contact__form-helper-text">
+                  {contactFormFields.text}
+                </div>
+                <div className="form-control">
+                  <input name="firstName" placeholder="Imię" />
+                </div>
+                <div className="form-control">
+                  <input name="lastName" placeholder="Nazwisko" />
+                </div>
+                <div className="form-control">
+                  <input name="email" placeholder="Adres e-mail" type="email" />
+                </div>
+                <div className="form-control">
+                  <input
+                    name="phone"
+                    placeholder="Numer telefonu"
+                    type="phone"
+                  />
+                </div>
+                <div className="form-control textarea-control">
+                  <textarea name="content" placeholder="Treść wiadomości" />
+                  <button className="button" type="submit">
+                    Wyślij
+                  </button>
+                </div>
               </div>
-              <div className="form-control">
-                <input name="firstName" placeholder="Imię" />
-              </div>
-              <div className="form-control">
-                <input name="lastName" placeholder="Nazwisko" />
-              </div>
-              <div className="form-control">
-                <input name="email" placeholder="Adres e-mail" type="email" />
-              </div>
-              <div className="form-control">
-                <input name="phone" placeholder="Numer telefonu" type="phone" />
-              </div>
-              <div className="form-control textarea-control">
-                <textarea name="content" placeholder="Treść wiadomości" />
-              <button className="button" type="submit">Wyślij</button>
-              </div>
-            </div>
-          </form>
+            </form>
           </div>
         </Section>
       </main>
+      <Footer text={footerFields.content} />
     </div>
   );
 };
