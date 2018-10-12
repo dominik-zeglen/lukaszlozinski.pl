@@ -16,7 +16,7 @@ export const isScrolledTo = (nodeId: string) => {
   const topPosition = node.getBoundingClientRect().top;
   const bottomPosition = node.getBoundingClientRect().bottom;
 
-  return topPosition < 0 && bottomPosition > 0;
+  return topPosition < 5 && bottomPosition > 5;
 };
 
 export const getPageBySlug = (pages: IPage[], slug: string) =>
