@@ -12,7 +12,7 @@ import { OFFER_DIRECTORY, SITE_ELEMENTS_DIRECTORY, SITEDATA } from "./query";
 const apolloClient = new ApolloClient({
   cache: new InMemoryCache(),
   link: createHttpLink({
-    uri: '/graphql',
+    uri: '/graphql/',
   }),
 });
 

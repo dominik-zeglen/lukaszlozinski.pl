@@ -6,6 +6,8 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=inkster
       - MONGO_INITDB_ROOT_PASSWORD=inkster
       - MONGO_INITDB_ROOT_DATABASE=inkster
+    ports:
+      - "27017:27017"
   inkster:
     image: rainbowsprinkles/inkster:latest
     links:
