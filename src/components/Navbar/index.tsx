@@ -13,7 +13,7 @@ interface INavbarProps {
 const menuItems: IMenuItem[] = [
   {
     id: 'o-mnie',
-    label: 'O mnie',
+    label: 'Życiorys',
   },
   {
     id: 'oferta',
