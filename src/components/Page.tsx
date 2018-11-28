@@ -59,7 +59,7 @@ export const Page: React.SFC<IPageProps> = ({data, scrollPosition}) => {
           </div>
         </Section>
         <Section id="oferta" title={data.offers.name}>
-          {data.offers.pages.map((offer, offerIndex) => (
+          {data.offers.pages.slice().reverse().map((offer, offerIndex) => (
             <Offer
               offer={offer}
               reverse={offerIndex % 2 === 1}
